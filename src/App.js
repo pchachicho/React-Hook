@@ -4,10 +4,10 @@ function App() {
   const [currentState, updatedState] = useState(4);
 
   function decreaseCount() {
-    updatedState(currentState - 1);
+    updatedState((previousCount) => previousCount - 1);
   }
   function increaseCount() {
-    updatedState(currentState + 1);
+    updatedState((previousCount) => previousCount + 1);
   }
   return (
     <>
